@@ -7,6 +7,8 @@ class Players extends React.Component  {
             players: []
         }
     }
+
+
     componentDidMount(){
         fetch(`http://localhost:5000/api/players`)
         .then(res=> res.json())
@@ -14,22 +16,29 @@ class Players extends React.Component  {
         .catch( err => console.log(" an error has occured", err))
 
     }
+  
 
     render(){
         {console.log(this.state.players)}
+        
         return (
             <div>
                 <div className="players-title">
-                <h1>Players</h1>
+            
                 </div>
                 <div className="players-wrapper">
                 {this.state.players.map(player => {
                     return (
-                        <div className="players">
-                        <p>Name: {player.name}</p>
-                        <p>Country: {player.country}</p>
-                        <p>searches: {player.searches}</p>
-
+                        <div className="flip-card">
+                            <div className="flip-card-inner">
+                                <div className="flip-card-front">
+                                    <p>Name: {player.name}</p>
+                                </div>
+                                <div className="flip-card-back">
+                                    <p>Country: {player.country}</p>
+                                    <p>searches: {player.searches}</p>
+                                </div>
+                            </div>
                         </div>
                     )
                 })}
@@ -39,6 +48,5 @@ class Players extends React.Component  {
     }
     }
 
-    
 
 export default Players;
