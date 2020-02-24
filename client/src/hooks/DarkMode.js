@@ -1,7 +1,13 @@
 import {useEffect} from 'react'
+<<<<<<< HEAD
 import {LocalStorage} from './LocalStoarage'
 
 export const Darkmode = (value) => {
+=======
+import {LocalStorage} from './LocalStorage'
+
+export const useDarkmode = (value) => {
+>>>>>>> 547343374cf2ea2586aee8d2348dec41d09eaf6c
 
     const [values, setValues] = LocalStorage('dark',value)
 
