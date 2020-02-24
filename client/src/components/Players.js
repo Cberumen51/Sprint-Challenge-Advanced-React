@@ -32,7 +32,8 @@ class Players extends React.Component  {
                         <div className="flip-card">
                             <div className="flip-card-inner">
                                 <div className="flip-card-front">
-                                    <p>Name: {player.name}</p>
+                                    <p>Name:</p>
+                                    <p> {player.name}</p>
                                 </div>
                                 <div className="flip-card-back">
                                     <p>Country: {player.country}</p>
